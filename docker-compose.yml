@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   moviepilot:
-    image: mr.maxmin.cc/jxxghp/moviepilot-v2:latest
+    image: jxxghp/moviepilot-v2:latest
     container_name: moviepilot-v2
     hostname: moviepilot-v2
     stdin_open: true
@@ -24,7 +24,7 @@ services:
     restart: always
 
   qbittorrent:
-    image: mr.maxmin.cc/linuxserver/qbittorrent:4.6.6
+    image: linuxserver/qbittorrent:4.6.6
     container_name: qbittorrent
     network_mode: host
     environment:
@@ -39,7 +39,7 @@ services:
     restart: unless-stopped
 
   emby:
-    image: mr.maxmin.cc/amilys/embyserver
+    image: amilys/embyserver
     container_name: emby
     network_mode: host
     privileged: true
